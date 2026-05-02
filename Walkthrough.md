@@ -51,47 +51,63 @@ The Windows Server 2022 Standard Evaluation ISO is selected as the installation 
 
 ---
 
-### Step 4 — OS Type Selection
+### Step 4 — ISO Selected
 
-![OS Type Selection](Screenshots/04_vmware_os_type_selected.png)
+![ISO Selected](Screenshots/04_vmware_iso_selected.png)
+
+The ISO is confirmed selected and VMware detects it as a Windows installation disc. The wizard is ready to proceed to the next configuration step.
+
+---
+
+### Step 5 — OS Type Selection
+
+![OS Type Selection](Screenshots/05_vmware_os_type_selection.png)
 
 VMware is configured to recognize this VM as a Windows Server 2022 machine. This ensures VMware applies the correct hardware compatibility settings and driver optimizations for the operating system.
 
 ---
 
-### Step 5 — VM Name and Location
+### Step 6 — VM Name and Location
 
-![VM Name and Location](Screenshots/05_vmware_vm_name_location.png)
+![VM Name and Location](Screenshots/06_vmware_vm_name_location.png)
 
 The VM is named Windows Server 2022 DC01 and the storage location is set on the G drive under the HomeLab project folder structure. Consistent naming conventions matter in enterprise environments where dozens of VMs may exist across multiple hosts.
 
 ---
 
-### Step 6 — Processor Configuration
+### Step 7 — Processor Configuration
 
-![Processor Configuration](Screenshots/06_vmware_processor_config.png)
+![Processor Configuration](Screenshots/07_vmware_processor_config.png)
 
 4 processor cores are allocated to DC01. A domain controller handling authentication, DNS, and Group Policy for a small lab environment runs efficiently on 4 cores. Overallocating CPU to one VM starves other VMs running simultaneously.
 
 ---
 
-### Step 7 — Firmware Type
+### Step 8 — Firmware Type
 
-![Firmware Type](Screenshots/07_vmware_firmware_type.png)
+![Firmware Type](Screenshots/08_vmware_firmware_type.png)
 
 UEFI firmware is selected for DC01. Modern Windows Server installations perform better on UEFI compared to legacy BIOS. This also enables Secure Boot which is standard in production server deployments.
 
 ---
 
-### Step 8 — RAM Configuration
+### Step 9 — Processor Config Confirmed
 
-![RAM Configuration](Screenshots/08_vmware_ram_config.png)
+![Processor Config Confirmed](Screenshots/09_vmware_processor_config.png)
+
+The processor configuration is confirmed before moving forward. The core count and socket configuration are verified to ensure DC01 has adequate compute resources.
+
+---
+
+### Step 10 — RAM Configuration
+
+![RAM Configuration](Screenshots/10_vmware_ram_config.png)
 
 4GB of RAM is allocated to DC01. This is the minimum recommended for a Windows Server 2022 domain controller and is sufficient for a lab environment handling a small number of identities and authentication requests.
 
 ---
 
-### Step 9 — Network Configuration: Bridged
+### Step 11 — Network Configuration: Bridged
 
 ![Network Bridged](Screenshots/11_vmware_network_bridged.png)
 
@@ -99,7 +115,7 @@ The network adapter is set to Bridged mode pointing to the Intel I226-V physical
 
 ---
 
-### Step 10 — IO Controller
+### Step 12 — IO Controller
 
 ![IO Controller](Screenshots/12_vmware_io_controller.png)
 
@@ -107,7 +123,7 @@ The LSI Logic SAS IO controller is selected for optimal disk performance with Wi
 
 ---
 
-### Step 11 — Disk Type
+### Step 13 — Disk Type
 
 ![Disk Type](Screenshots/13_vmware_disk_type.png)
 
@@ -115,7 +131,7 @@ NVMe is selected as the disk type. NVMe provides significantly faster disk IO co
 
 ---
 
-### Step 12 — Select Disk
+### Step 14 — Select Disk
 
 ![Select Disk](Screenshots/14_vmware_select_disk.png)
 
@@ -123,7 +139,7 @@ A new virtual disk is created for DC01. Creating a fresh disk ensures a clean in
 
 ---
 
-### Step 13 — Disk Capacity
+### Step 15 — Disk Capacity
 
 ![Disk Capacity](Screenshots/15_vmware_disk_capacity.png)
 
@@ -131,7 +147,7 @@ A new virtual disk is created for DC01. Creating a fresh disk ensures a clean in
 
 ---
 
-### Step 14 — Disk File
+### Step 16 — Disk File
 
 ![Disk File](Screenshots/16_vmware_disk_file.png)
 
@@ -139,7 +155,7 @@ The virtual disk file location is confirmed on the G drive within the project fo
 
 ---
 
-### Step 15 — CDVD ISO Connected
+### Step 17 — CDVD ISO Connected
 
 ![CDVD ISO Connected](Screenshots/17_vmware_cdvd_iso_connected.png)
 
@@ -147,7 +163,7 @@ The Windows Server 2022 ISO is connected to the virtual CDVD drive. This is the 
 
 ---
 
-### Step 16 — VM Created
+### Step 18 — VM Created
 
 ![VM Created](Screenshots/18_vmware_vm_created.png)
 
@@ -162,7 +178,7 @@ With the VM built, Windows Server 2022 is installed and the server is prepared f
 
 ---
 
-### Step 17 — Setup Boot
+### Step 19 — Setup Boot
 
 ![Setup Boot](Screenshots/19_windows_server_setup_boot.png)
 
@@ -170,7 +186,7 @@ Windows Server 2022 setup boots from the ISO. The installation wizard initialize
 
 ---
 
-### Step 18 — Edition Selection
+### Step 20 — Edition Selection
 
 ![Edition Selection](Screenshots/20_windows_server_edition_selection.png)
 
@@ -178,7 +194,7 @@ Windows Server 2022 Standard with Desktop Experience is selected. Desktop Experi
 
 ---
 
-### Step 19 — Install Type
+### Step 21 — Install Type
 
 ![Install Type](Screenshots/21_windows_server_install_type.png)
 
@@ -186,7 +202,7 @@ A custom installation is selected to perform a clean install on the new virtual 
 
 ---
 
-### Step 20 — Drive Selection
+### Step 22 — Drive Selection
 
 ![Drive Selection](Screenshots/22_windows_server_drive_selection.png)
 
@@ -194,7 +210,7 @@ The 60GB virtual disk created in VMware is selected as the installation target. 
 
 ---
 
-### Step 21 — Installing
+### Step 23 — Installing
 
 ![Installing](Screenshots/23_windows_server_installing.png)
 
@@ -202,7 +218,7 @@ Windows Server 2022 installation is in progress. The setup process copies files,
 
 ---
 
-### Step 22 — Admin Password
+### Step 24 — Admin Password
 
 ![Admin Password](Screenshots/24_windows_server_admin_password.png)
 
@@ -210,7 +226,7 @@ The local Administrator password is set during initial setup. This password is u
 
 ---
 
-### Step 23 — Desktop First Login
+### Step 25 — Desktop First Login
 
 ![Desktop First Login](Screenshots/25_windows_server_desktop_first_login.png)
 
@@ -218,7 +234,7 @@ Windows Server 2022 Desktop Experience loads for the first time after installati
 
 ---
 
-### Step 24 — VMware Tools Install
+### Step 26 — VMware Tools Install
 
 ![VMware Tools Install](Screenshots/26_vmware_tools_install.png)
 
@@ -226,7 +242,7 @@ VMware Tools is installed on DC01. This is a required step that installs drivers
 
 ---
 
-### Step 25 — Desktop VMware Tools
+### Step 27 — Desktop VMware Tools
 
 ![Desktop VMware Tools](Screenshots/27_windows_server_desktop_vmware_tools.png)
 
@@ -234,7 +250,39 @@ DC01 desktop is now running at full resolution with VMware Tools installed. The 
 
 ---
 
-### Step 26 — Network Editor
+### Step 28 — Network Adapter
+
+![Network Adapter](Screenshots/28_windows_server_network_adapter.png)
+
+The network adapter settings are reviewed on DC01. The bridged network adapter is confirmed active and the server is ready to receive a static IP assignment before Active Directory promotion.
+
+---
+
+### Step 29 — Static IP
+
+![Static IP](Screenshots/29_windows_server_static_ip.png)
+
+The static IP address 192.168.50.10 is configured on DC01. A static IP is required for a domain controller because all domain-joined machines and SailPoint ISC reference the DC by its IP address. A DHCP address that changes would break authentication and connectivity across the entire lab.
+
+---
+
+### Step 30 — IP Confirmed
+
+![IP Confirmed](Screenshots/30_windows_server_ip_confirmed.png)
+
+The static IP configuration is confirmed. DC01 is now reachable at 192.168.50.10 on the 192.168.50.0/24 network.
+
+---
+
+### Step 31 — Ping Success
+
+![Ping Success](Screenshots/31_windows_server_ping_success.png)
+
+DC01 successfully pings other devices on the network confirming the static IP and bridged network adapter are working correctly. Network connectivity is validated before proceeding to Active Directory installation.
+
+---
+
+### Step 32 — Network Editor
 
 ![Network Editor](Screenshots/32_vmware_network_editor.png)
 
@@ -242,15 +290,15 @@ The VMware Virtual Network Editor is opened as Administrator to resolve a bridge
 
 ---
 
-### Step 27 — Rename to DC01
+### Step 33 — Rename DC01
 
-![Rename to DC01](Screenshots/33_windows_server_dc01.png)
+![Rename DC01](Screenshots/32_windows_server_rename_dc01.png)
 
 The server is renamed from the default Windows-generated name to DC01. Proper server naming is important in enterprise environments because Active Directory, DNS records, and service configurations all reference the server by its hostname. Renaming after AD promotion causes significant issues, so this is done before any roles are installed.
 
 ---
 
-### Step 28 — DC01 Desktop
+### Step 34 — DC01 Desktop
 
 ![DC01 Desktop](Screenshots/33_windows_server_dc01_desktop.png)
 
@@ -265,7 +313,7 @@ This section covers installing the Active Directory Domain Services role and pro
 
 ---
 
-### Step 29 — AD Roles Wizard
+### Step 35 — AD Roles Wizard
 
 ![AD Roles Wizard](Screenshots/34_ad_roles_wizard.png)
 
@@ -273,7 +321,7 @@ The Add Roles and Features Wizard is opened from Server Manager. This wizard gui
 
 ---
 
-### Step 30 — Installation Type
+### Step 36 — Installation Type
 
 ![Installation Type](Screenshots/35_ad_installation_type.png)
 
@@ -281,7 +329,7 @@ Role-based installation is selected. This installs the AD DS role on the local s
 
 ---
 
-### Step 31 — Server Selection
+### Step 37 — Server Selection
 
 ![Server Selection](Screenshots/36_ad_server_selection.png)
 
@@ -289,7 +337,7 @@ DC01 is selected as the target server. The server pool shows DC01 with its curre
 
 ---
 
-### Step 32 — Role Selected
+### Step 38 — Role Selected
 
 ![Role Selected](Screenshots/37_ad_role_selected.png)
 
@@ -297,7 +345,7 @@ Active Directory Domain Services is selected from the roles list. This role incl
 
 ---
 
-### Step 33 — Features Selection
+### Step 39 — Features Selection
 
 ![Features Selection](Screenshots/38_ad_features_selection.png)
 
@@ -305,7 +353,7 @@ Additional features required by AD DS are confirmed. The wizard automatically se
 
 ---
 
-### Step 34 — AD DS Info Screen
+### Step 40 — AD DS Info Screen
 
 ![AD DS Info Screen](Screenshots/39_ad_ds_info_screen.png)
 
@@ -313,7 +361,7 @@ The AD DS information screen explains what the role does and what is required to
 
 ---
 
-### Step 35 — Confirmation Screen
+### Step 41 — Confirmation Screen
 
 ![Confirmation Screen](Screenshots/40_ad_confirmation_screen.png)
 
@@ -321,7 +369,7 @@ The installation summary is reviewed before proceeding. All selected roles and f
 
 ---
 
-### Step 36 — Install Complete
+### Step 42 — Install Complete
 
 ![Install Complete](Screenshots/41_ad_install_complete.png)
 
@@ -329,7 +377,7 @@ Active Directory Domain Services installation completes successfully. A notifica
 
 ---
 
-### Step 37 — New Forest lab.local
+### Step 43 — New Forest lab.local
 
 ![New Forest lab.local](Screenshots/42_ad_new_forest_lab_local.png)
 
@@ -337,7 +385,7 @@ The Active Directory Domain Services Configuration Wizard opens. A new forest is
 
 ---
 
-### Step 38 — DC Options
+### Step 44 — DC Options
 
 ![DC Options](Screenshots/43_ad_dc_options.png)
 
@@ -345,7 +393,7 @@ Domain controller options are configured. Forest Functional Level and Domain Fun
 
 ---
 
-### Step 39 — DNS Options
+### Step 45 — DNS Options
 
 ![DNS Options](Screenshots/44_ad_dns_options.png)
 
@@ -353,7 +401,7 @@ DNS delegation options are reviewed. Since this is a new forest with no parent D
 
 ---
 
-### Step 40 — Additional Options
+### Step 46 — Additional Options
 
 ![Additional Options](Screenshots/45_ad_additional_options.png)
 
@@ -361,7 +409,7 @@ The NetBIOS domain name is confirmed as LAB. NetBIOS names are the legacy short 
 
 ---
 
-### Step 41 — AD Paths
+### Step 47 — AD Paths
 
 ![AD Paths](Screenshots/46_ad_paths.png)
 
@@ -369,7 +417,7 @@ The default paths for the AD DS database, log files, and SYSVOL folder are accep
 
 ---
 
-### Step 42 — Review Options
+### Step 48 — Review Options
 
 ![Review Options](Screenshots/47_ad_review_options.png)
 
@@ -377,7 +425,7 @@ The full configuration summary is reviewed before promotion begins. Forest name,
 
 ---
 
-### Step 43 — Prerequisites Passed
+### Step 49 — Prerequisites Passed
 
 ![Prerequisites Passed](Screenshots/48_ad_prerequisites_passed.png)
 
@@ -392,7 +440,7 @@ After promotion DC01 is verified to confirm Active Directory is running correctl
 
 ---
 
-### Step 44 — Domain Controller Desktop
+### Step 50 — Domain Controller Desktop
 
 ![Domain Controller Desktop](Screenshots/49_dc01_domain_controller_desktop.png)
 
@@ -400,7 +448,7 @@ DC01 reboots after promotion and logs back in as LAB\Administrator. The domain p
 
 ---
 
-### Step 45 — Active Directory Users and Computers
+### Step 51 — Active Directory Users and Computers
 
 ![Active Directory Users and Computers](Screenshots/50_active_directory_users_computers.png)
 
@@ -408,7 +456,7 @@ Active Directory Users and Computers is opened showing the lab.local domain stru
 
 ---
 
-### Step 46 — LabUsers OU Expanded
+### Step 52 — LabUsers OU Expanded
 
 ![LabUsers OU Expanded](Screenshots/51_ad_lab_local_expanded.png)
 
@@ -416,7 +464,7 @@ The OU structure created for the lab is visible in Active Directory Users and Co
 
 ---
 
-### Step 47 — Test User Created
+### Step 53 — Test User Created
 
 ![Test User Created](Screenshots/52_ad_test_user_created.png)
 
@@ -424,17 +472,17 @@ A test user account is manually created in Active Directory to verify that accou
 
 ---
 
-### Step 48 — DC01 Network Verified
+### Step 54 — DC01 Network Verified
 
 ![DC01 Network Verified](Screenshots/53_dc01_network_verified.png)
 
-Network connectivity from DC01 is verified. The static IP address 192.168.50.10 is confirmed and connectivity to other devices on the 192.168.50.0/24 network is tested. A static IP is required for DC01 because SailPoint ISC and IQService both reference the domain controller by its IP address. A DHCP address could change and break the connection.
+Network connectivity from DC01 is verified. The static IP address 192.168.50.10 is confirmed and connectivity to other devices on the 192.168.50.0/24 network is tested. A static IP is required for DC01 because SailPoint ISC and IQService both reference the domain controller by its IP address.
 
 ---
 
-### Step 49 — Pinging SailPoint VA
+### Step 55 — Pinging SailPoint VA
 
-![Pinging SailPoint VA](Screenshots/54_dc01_pinging_sailpoint_va.png)
+![Pinging SailPoint VA](Screenshots/54_dc01_ping_sailpoint_va.png)
 
 DC01 successfully pings the SailPoint Virtual Appliance at 192.168.50.211 confirming bidirectional network connectivity between the two systems. This is a critical validation step. If DC01 and the VA cannot reach each other over the network, SailPoint will never be able to provision accounts regardless of how everything else is configured.
 
@@ -447,7 +495,7 @@ With DC01 verified and Active Directory running, the next step is connecting Sai
 
 ---
 
-### Step 50 — SailPoint Sources Page
+### Step 56 — SailPoint Sources Page
 
 ![SailPoint Sources Page](Screenshots/55_sailpoint_sources_page.png)
 
@@ -455,7 +503,7 @@ The Sources page in SailPoint ISC Admin shows the existing HR_Source_CSV_Lab fro
 
 ---
 
-### Step 51 — AD Connector Search
+### Step 57 — AD Connector Search
 
 ![AD Connector Search](Screenshots/56_sailpoint_ad_connector_search.png)
 
@@ -463,15 +511,23 @@ The source creation wizard is opened and Active Directory is searched in the con
 
 ---
 
-### Step 52 — AD Source Create
+### Step 58 — AD Source Base Config
 
-![AD Source Create](Screenshots/57_sailpoint_ad_source_create.png)
+![AD Source Base Config](Screenshots/57_sailpoint_ad_source_base_config.png)
 
-The Active Directory source is selected and the source creation begins. The source is named AD_Lab_DC01 to clearly identify which domain controller it connects to. Descriptive naming is important in environments with multiple AD sources representing different domains or forests.
+The Active Directory source base configuration is set up. The source is named AD_Lab_DC01 to clearly identify which domain controller it connects to. Descriptive naming is important in environments with multiple AD sources representing different domains or forests.
 
 ---
 
-### Step 53 — Forest Settings
+### Step 59 — AD Source Create
+
+![AD Source Create](Screenshots/57_sailpoint_ad_source_create.png)
+
+The Active Directory source creation is confirmed. SailPoint prepares to configure the connection settings for the new AD source.
+
+---
+
+### Step 60 — Forest Settings
 
 ![Forest Settings](Screenshots/58_sailpoint_ad_forest_settings.png)
 
@@ -479,7 +535,7 @@ Forest Settings are configured with the forest name lab.local and the domain con
 
 ---
 
-### Step 54 — Forest Settings Saved
+### Step 61 — Forest Settings Saved
 
 ![Forest Settings Saved](Screenshots/59_sailpoint_ad_forest_settings_saved.png)
 
@@ -487,7 +543,7 @@ Forest settings are saved successfully. SailPoint now knows the entry point into
 
 ---
 
-### Step 55 — Domain Settings
+### Step 62 — Domain Settings
 
 ![Domain Settings](Screenshots/60_sailpoint_ad_domain_settings.png)
 
@@ -495,7 +551,7 @@ Domain Settings are configured with the base DN DC=lab,DC=local on port 389. Por
 
 ---
 
-### Step 56 — Domain Settings Saved
+### Step 63 — Domain Settings Saved
 
 ![Domain Settings Saved](Screenshots/61_sailpoint_ad_domain_settings_saved.png)
 
@@ -503,7 +559,7 @@ Domain settings are saved. SailPoint now has both the forest entry point and the
 
 ---
 
-### Step 57 — Review Summary
+### Step 64 — Review Summary
 
 ![Review Summary](Screenshots/62_sailpoint_ad_review_summary.png)
 
@@ -511,23 +567,23 @@ The source configuration summary is reviewed showing all settings before saving.
 
 ---
 
-### Step 58 — Account Group Settings
+### Step 65 — Account Group Settings
 
 ![Account Group Settings](Screenshots/63_sailpoint_ad_account_group_settings.png)
 
-Account and Group Settings are configured. This tells SailPoint which object classes in Active Directory represent user accounts and groups. The standard values for user accounts are the person and organizationalPerson object classes. These settings define what SailPoint treats as an identity versus a group entitlement.
+Account and Group Settings are configured. This tells SailPoint which object classes in Active Directory represent user accounts and groups. These settings define what SailPoint treats as an identity versus a group entitlement.
 
 ---
 
-### Step 59 — Servers Fixed
+### Step 66 — Domain Servers Fixed
 
-![Servers Fixed](Screenshots/64_sailpoint_ad_servers_fixed.png)
+![Domain Servers Fixed](Screenshots/64_sailpoint_ad_domain_servers_fixed.png)
 
 The domain controller server list is confirmed with DC01 at 192.168.50.10. In environments with multiple domain controllers this list would contain all DCs for redundancy. SailPoint will use this list to connect to Active Directory for aggregation and provisioning operations.
 
 ---
 
-### Step 60 — Test Connection Success
+### Step 67 — Test Connection Success
 
 ![Test Connection Success](Screenshots/65_sailpoint_ad_test_connection_success.png)
 
@@ -535,7 +591,7 @@ The test connection from SailPoint ISC to Active Directory returns successfully.
 
 ---
 
-### Step 61 — Account Schema
+### Step 68 — Account Schema
 
 ![Account Schema](Screenshots/66_sailpoint_ad_account_schema.png)
 
@@ -543,7 +599,7 @@ The account schema is configured with 88 attributes mapped from Active Directory
 
 ---
 
-### Step 62 — Correlation Saved
+### Step 69 — Correlation Saved
 
 ![Correlation Saved](Screenshots/68_sailpoint_ad_correlation_saved.png)
 
@@ -551,7 +607,7 @@ Account correlation is configured with the rule Work Email equals mail. This tel
 
 ---
 
-### Step 63 — Account Aggregation
+### Step 70 — Account Aggregation
 
 ![Account Aggregation](Screenshots/69_sailpoint_ad_account_aggregation.png)
 
@@ -559,7 +615,7 @@ The first account aggregation is run on AD_Lab_DC01. This is the process where S
 
 ---
 
-### Step 64 — Aggregation Success
+### Step 71 — Aggregation Success
 
 ![Aggregation Success](Screenshots/70_sailpoint_ad_aggregation_success.png)
 
@@ -567,11 +623,11 @@ Account aggregation completes successfully. SailPoint has imported all existing 
 
 ---
 
-### Step 65 — Accounts Discovered
+### Step 72 — Accounts Discovered
 
 ![Accounts Discovered](Screenshots/71_sailpoint_ad_accounts_discovered.png)
 
-The accounts page for AD_Lab_DC01 shows all 4 discovered accounts. Each account shows its correlation status. The default system accounts like Administrator, Guest, and krbtgt show as Uncorrelated because there are no matching SailPoint identities for them. The test user also shows Uncorrelated because it was created manually without a corresponding CSV identity. This is expected behavior at this stage.
+The accounts page for AD_Lab_DC01 shows all 4 discovered accounts. Each account shows its correlation status. The default system accounts show as Uncorrelated because there are no matching SailPoint identities for them. This is expected behavior at this stage.
 
 ---
 
@@ -586,7 +642,7 @@ The VA was migrated from VirtualBox to VMware by converting the VDI disk to VMDK
 
 ---
 
-### Step 66 — LabUsers OU Created
+### Step 73 — LabUsers OU Created
 
 ![LabUsers OU Created](Screenshots/72_ad_labusers_ou_created.png)
 
@@ -601,11 +657,11 @@ With the VA migrated and connectivity confirmed, the OU structure is built and t
 
 ---
 
-### Step 67 — OU Structure Complete
+### Step 74 — OU Structure Complete
 
 ![OU Structure Complete](Screenshots/73_ad_ou_structure_complete.png)
 
-The OU structure in Active Directory is confirmed complete. LabUsers contains five department sub-OUs matching the departments in the CSV HR source. Engineering, Finance, HR, IT, and Marketing are all present. This OU structure is where SailPoint will create new accounts when the Joiner workflow fires. The distinguishedName in the provisioning policy points to OU=LabUsers,DC=lab,DC=local as the target container.
+The OU structure in Active Directory is confirmed complete. LabUsers contains five department sub-OUs matching the departments in the CSV HR source. This OU structure is where SailPoint will create new accounts when the Joiner workflow fires. The distinguishedName in the provisioning policy points to OU=LabUsers,DC=lab,DC=local as the target container.
 
 ---
 
@@ -616,7 +672,7 @@ The access profile connects the AD entitlement to the identity lifecycle, ensuri
 
 ---
 
-### Step 68 — Create Account Policy
+### Step 75 — Create Account Policy
 
 ![Create Account Policy](Screenshots/74_sailpoint_create_account_policy.png)
 
@@ -624,15 +680,15 @@ The Create Account provisioning policy is configured on the AD_Lab_DC01 source. 
 
 ---
 
-### Step 69 — Static DN Value
+### Step 76 — Static DN Value
 
 ![Static DN Value](Screenshots/75_sailpoint_dn_static_value.png)
 
-The distinguishedName is configured as a Static value pointing to OU=LabUsers,DC=lab,DC=local. This tells SailPoint exactly which OU to create new accounts in. In a production environment this would typically be a dynamic rule that routes accounts to the correct department OU based on the user's department attribute. For this lab a static OU keeps the configuration straightforward.
+The distinguishedName is configured as a Static value pointing to OU=LabUsers,DC=lab,DC=local. This tells SailPoint exactly which OU to create new accounts in. In a production environment this would typically be a dynamic rule that routes accounts to the correct department OU based on the user's department attribute.
 
 ---
 
-### Step 70 — Create Account Complete
+### Step 77 — Create Account Complete
 
 ![Create Account Complete](Screenshots/76_sailpoint_create_account_complete.png)
 
@@ -640,15 +696,15 @@ The provisioning policy configuration is saved. SailPoint now knows what to writ
 
 ---
 
-### Step 71 — AD Lab DC01 Test Connection Success
+### Step 78 — AD Lab DC01 Test Connection Healthy
 
-![AD Lab DC01 Test Connection Success](Screenshots/77_AD_Lab_DC01_Test_Connection_Success.png)
+![AD Lab DC01 Test Connection Healthy](Screenshots/77_AD_Lab_DC01_Test_Connection_Success_Healthy.png)
 
 A final test connection is run confirming SailPoint ISC can reach DC01 through the VA and authenticate to Active Directory. This green status confirms the read path is healthy before enabling automated provisioning.
 
 ---
 
-### Step 72 — Entitlement Aggregation Success
+### Step 79 — Entitlement Aggregation Success
 
 ![Entitlement Aggregation Success](Screenshots/78_AD_Lab_DC01_Entitlement_Aggregation_Success.png)
 
@@ -656,7 +712,7 @@ Entitlement aggregation is run to pull all available AD entitlements into SailPo
 
 ---
 
-### Step 73 — Access Profile Enabled
+### Step 80 — Access Profile Enabled
 
 ![Access Profile Enabled](Screenshots/79_AD_LabUsers_Access_Profile_Enabled.png)
 
@@ -664,7 +720,7 @@ The AD_LabUsers_Access access profile is created with AD_Lab_DC01 as the source 
 
 ---
 
-### Step 74 — HR CSV Identity Profile Active State Access Profile Applied
+### Step 81 — HR CSV Identity Profile Active State Access Profile Applied
 
 ![HR CSV Identity Profile Active State](Screenshots/80_HR_CSV_Identity_Profile_Active_State_Access_Profile_Applied.png)
 
@@ -679,7 +735,7 @@ IQService is the SailPoint provisioning agent that must be installed on the doma
 
 ---
 
-### Step 75 — IQService Settings Configuration
+### Step 82 — IQService Settings Configuration
 
 ![IQService Settings](Screenshots/84_sailpoint_ad_iqservice_settings.png)
 
@@ -694,7 +750,7 @@ With the full pipeline configured, Emily Johnson is added to the HR source and t
 
 ---
 
-### Step 76 — Emily Johnson Identity Details
+### Step 83 — Emily Johnson Identity Details
 
 ![Emily Johnson Identity Details](Screenshots/81_sailpoint_emily_identity_details.png)
 
@@ -702,7 +758,7 @@ Emily Johnson's identity is visible in SailPoint ISC with employee ID JG9006. He
 
 ---
 
-### Step 77 — Emily Johnson Accounts Tab
+### Step 84 — Emily Johnson Accounts Tab
 
 ![Emily Johnson Accounts Tab](Screenshots/82_sailpoint_emily_accounts_tab.png)
 
@@ -710,7 +766,7 @@ The Accounts tab on Emily's identity shows 2 results. Her IdentityNow account an
 
 ---
 
-### Step 78 — Emily Johnson Events Tab
+### Step 85 — Emily Johnson Events Tab
 
 ![Emily Johnson Events Tab](Screenshots/83_sailpoint_emily_events_tab.png)
 
@@ -718,7 +774,7 @@ The Events tab shows the complete automation history for Emily's identity with 8
 
 ---
 
-### Step 79 — Create Account Provisioning Policy
+### Step 86 — Create Account Provisioning Policy
 
 ![Create Account Provisioning Policy](Screenshots/85_sailpoint_ad_create_account_policy.png)
 
@@ -726,7 +782,7 @@ The sAMAccountName attribute in the Create Account provisioning policy is shown 
 
 ---
 
-### Step 80 — AD Accounts Discovered
+### Step 87 — AD Accounts Discovered
 
 ![AD Accounts Discovered](Screenshots/86_sailpoint_ad_accounts_discovered.png)
 
